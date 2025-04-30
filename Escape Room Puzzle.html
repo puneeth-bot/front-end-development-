@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Escape Room</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Solve puzzles in this HTML-only escape room!">
+</head>
+<body>
+  <header>
+    <h1>HTML Escape Room</h1>
+    <p>Can you escape using only clues hidden in this page?</p>
+  </header>
+
+  <section id="start">
+    <h2>Room 1: The Locked Door</h2>
+    <details>
+      <summary>Clue</summary>
+      <p>Find the hidden number in the image below.</p>
+      <img src="door.jpg" alt="A door with the number 42 hidden" width="200">
+    </details>
+    <form action="#room2">
+      <label for="code">Enter the number:</label>
+      <input type="text" id="code" name="code">
+      <input type="submit" value="Unlock">
+    </form>
+  </section>
+
+  <section id="room2">
+    <h2>Room 2: The Sound Puzzle</h2>
+    <p>Listen to the audio and enter the word you hear:</p>
+    <audio controls>
+      <source src="clue.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <form action="#room3">
+      <label for="sound">Word:</label>
+      <input type="text" id="sound" name="sound">
+      <input type="submit" value="Next Room">
+    </form>
+  </section>
+
+  <section id="room3">
+    <h2>Room 3: The Final Riddle</h2>
+    <details>
+      <summary>Final Clue</summary>
+      <p>
+        <em>I speak without a mouth and hear without ears. What am I?</em>
+      </p>
+    </details>
+    <form action="#escape">
+      <label for="answer">Your Answer:</label>
+      <input type="text" id="answer" name="answer">
+      <input type="submit" value="Escape!">
+    </form>
+  </section>
+
+  <section id="escape">
+    <h2>Congratulations!</h2>
+    <video width="320" height="240" controls>
+      <source src="congrats.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>You have escaped the HTML room!</p>
+  </section>
+
+  <footer>
+    <p>Escape Room &copy; 2025</p>
+  </footer>
+</body>
+</html>
